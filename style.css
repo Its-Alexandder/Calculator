@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #1f2041;
+    display: grid;
+    place-items: center;
+}
+
+.calculadora {
+    background-color: #a8b2fd;
+    color: #3d405b;
+    width: 340px; /*Modifica el tamaño del color de la calculadora*/
+    max-width: 100%;
+    padding: 15px;
+    border-radius: 32px;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 0.5rem;
+    grid-template-rows: 160px repeat(5, 70px);
+    box-shadow: 15px 10px 0px 5px; /*Sombra*/
+}
+
+
+
+.pantalla {
+    color: hsl(229, 57%, 20%);;
+    grid-column: 1/-1;
+    background-color: #f8f9fa;
+    padding: 1.5rem; /*Centra el numero 0 en la pantalla*/
+    font-size: 3rem;
+    text-align: right;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 450;
+    margin: 12px 12px 25px;
+    box-shadow: 0px 0px 0px 10px #00000033;
+    overflow: hidden; /* Evita que los números se desborden fuera de la pantalla */
+}
+
+.pantalla.large-number {
+    font-size: 2rem; /* Tamaño de fuente más pequeño para números largos */
+}
+
+button{
+    background-color: #f8f9fa;
+    color: hsl(229, 57%, 20%);;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-weight: bold; /*Le da un toque resaltado a los botones de la calculadora*/
+    margin: 1px; /*Cambia el tamaño del color del fondo de los botones*/
+    font-size: 32px; /*Cambia el tamaño del numero que esta en el boton*/
+}
+
+button:hover {
+    background-color:  hsl(231, 90%, 92%);
+}
+
+.operator-btn{
+    background-color: hsl(229, 57%, 20%);
+    color: #f8f9fa;
+}
+
+#cero {
+    grid-column: span 2;
+}
+
+#igual {
+    grid-row: span 2;
+}
